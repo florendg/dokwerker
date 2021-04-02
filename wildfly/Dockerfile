@@ -1,8 +1,8 @@
 FROM java15:latest
 
 ENV \
-  WILDFLY_URL='https://download.jboss.org/wildfly/21.0.0.Final/wildfly-21.0.0.Final.tar.gz' \
-  WILDFLY_CHKSUM='0697db2640e87ef1073a374a67d1c14560f6bf74' \
+  WILDFLY_URL='https://download.jboss.org/wildfly/23.0.0.Final/wildfly-preview-23.0.0.Final.tar.gz' \
+  WILDFLY_CHKSUM='34d38f73d18fab4dfb0d58159fc79657bec42692' \
   WILDFLY_HOME=/opt/wildfly
 
 RUN curl -LfsSo /tmp/wildfly.tar.gz ${WILDFLY_URL}

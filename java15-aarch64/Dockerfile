@@ -8,8 +8,8 @@ ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8'
 RUN yum install -y tzdata openssl curl ca-certificates fontconfig gzip tar \
   && yum update -y yum clean all
 
-ENV BINARY_URL='https://github.com/AdoptOpenJDK/openjdk15-binaries/releases/download/jdk15u-2021-01-22-02-31/OpenJDK15U-jdk_x64_linux_hotspot_2021-01-22-02-31.tar.gz'
-ENV CHKSUM='eee6ea48d0dccfdc6c229e6635776aa8245d8d11b69bbf470f30d92b5e8ac8b8'
+ENV BINARY_URL='https://github.com/AdoptOpenJDK/openjdk15-binaries/releases/download/jdk-15.0.1%2B9/OpenJDK15U-jdk_aarch64_linux_hotspot_15.0.1_9.tar.gz'
+ENV CHKSUM='84398a1566d66ee5a88f3326fb7f0b70504eb510190f8f798bdb386481a3900e'
 
 RUN curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL}
 RUN echo "${CHKSUM} */tmp/openjdk.tar.gz" | sha256sum -c -
